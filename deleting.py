@@ -1,4 +1,4 @@
-a=[20,30,35,40,50,10,20,20,20,20,20,20]
+a=[20,30,35,40,30,10,20,20,20,20,20,20]
 '''b=int(input("Enter the searching value"))
 c=int(input("Enter the deleting value"))
 d=0
@@ -22,6 +22,13 @@ else:
             a.pop(j)
             break
 print(a)'''
+
+
+for i in a:
+    for j in a:
+        if i==j and a.count(i)>1:
+            a.remove(i)
+            print(a)
 
 
  

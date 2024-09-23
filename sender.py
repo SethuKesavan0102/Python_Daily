@@ -1,5 +1,5 @@
 customer=["loki","nandha","sk","ela","arjun"]
-amount=[20000,15000,10000,30000,4500]
+amount=(20000,15000,10000,30000,4500)
 j=0
 b=0
 a=0
@@ -8,13 +8,18 @@ sender=input("Enter the sender name : ")
 receiver=input("Enter the receiver name : ")
 transfer=int(input("Enter the transfer amount : "))
 
-'''for i in customer:
+for i in customer:
     if i==sender:
         amt=amount[j]
         print("Available amount : ",amt)
         x=amt - transfer
         print("available current balance : ",x)
+        a=list(amount)
+        a[j]=amt-transfer
+        a=tuple(a)
     j+=1
+print(a)
+
 
 for i in customer:
     if i==receiver:
@@ -22,12 +27,15 @@ for i in customer:
         print("The",receiver,"available amt",amt)
         y=amt + transfer
         print("The",receiver,"current balance ",y)
-    b+=1'''
+        a=list(amount)
+        a[b]=amt+transfer
+        a=tuple(a)
+    b+=1
+
+print(a)
 
 
-
-
-for i in customer:
+'''for i in customer:
     if i==sender or i==receiver:
         a=1
         break
@@ -51,7 +59,7 @@ for i in customer:
             print("The",receiver,"available amt",amt)
             y=amt + transfer
             print("The",receiver,"current balance ",y)
-        b+=1
+        b+=1'''
         
         
 

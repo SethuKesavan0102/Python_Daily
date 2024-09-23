@@ -1,5 +1,5 @@
 n=4
-for i in range(1,4,1):
+for i in range(1,8,1):
     j=0
     while(j<i):
         print("*",end=' ')

@@ -19,9 +19,28 @@ H E L L O W
 H E L L O W O
 H E L L O W O R
 H E L L O W O R L
-H E L L O W O R L D'''
+H E L L O W O R L D
 
 a="HELLO WORLD"
 
-for i in range(len(a)+1):
+s=""
+#for i in "HELLO WORLD"
+for i in a:
+    s=s+i
+    print(s)'''
+
+   #lib
+#1
+'''a,b=0,1
+while b<100:
+    print(a)
+    a,b=b,a+b'''
+
+#2
+for i in range(1,6,1):
+    for j in range(5,5>i,1):
+        j-=1
+    for z in range(1,1<i,1):
+        print("*",end=" ")
+        print("\n")
     
