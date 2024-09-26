@@ -85,16 +85,18 @@ d.update(c)
 print(d)'''
 
     #nested dictionary
-a={'key':{'key':'value'}}
+'''a={'key':{'key':'value'}}
 
 a={'a1':{'Name':'raja','age':20,'city':'Madurai'},
    'a2':{'Name':'ragu','age':21,'city':'Madurai'},
    'a3':{'Name':'ravi','age':22,'city':'Madurai'}
    }
-#print(a['a1']['Name'])
+#print(a['a1']['Name'])'''
 
 
 #accessing values in dictionary
+#task
+
 
 '''for i,b in a.items():
     print(i)
@@ -102,13 +104,67 @@ a={'a1':{'Name':'raja','age':20,'city':'Madurai'},
         print(j,':',b[j])'''
 
 
-
-
-for i in a.items():
+'''for i in a.items():
     x,y=i
     print(x)
     for j in y:
-        print(j,':',y[j])
+        print(j,':',y[j])'''
+
+
+#z=int(input("enter the pair :"))
+a={}
+#1
+'''for i in range(z):
+    x=input("enter the keys :")
+    y=input("enter the values :")
+    a[x]=y
+print(a)'''
+
+#2
+
+'''for i in range(50):
+    x=input("enter the key :")
+    if x=="ok":
+        break
+    y=input("enter the values :")
+    a[x]=y
+print(a)'''
+
+#3
+
+'''for i in range(50):
+    z=input("enter the key :")
+    
+    if z=='ok':
+        break
+    x=input("enter the name :")
+    y=input("enter the city :")
+    w=input("enter the age :")
+    
+   
+    a.update({z:{'name':x,'city':y,'age':w}})
+   
+print(a)'''
+
+#4
+
+'''for i in range(50):
+    z=input("enter the key :")
+    if z=='ok':
+        break
+    x=input("enter the product name :")
+    y=input("enter the id :")
+    w=input("enter the price :")
+    b=input("enter the expiry :")
+    a[z]={
+        'product':x,
+        'id':y,
+        'price':w,
+        'expiry':b
+        }
+print(a)'''
+    
+
 
 
     
