@@ -163,6 +163,19 @@ print(a)'''
         'expiry':b
         }
 print(a)'''
+
+#5
+d={}
+l=['name','age','city']
+z=int(input("enter the number of pair :"))
+for i in range(z):
+    x=input("enter the key :")
+    y={}
+    for j in l:
+        y[j]=input(j)
+        
+    d[x]=y
+print(d)
     
 
 

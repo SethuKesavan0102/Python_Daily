@@ -26,11 +26,19 @@ print(c(5,4,3))'''
 
 #Returning value from function:
 
-def add():
+'''def add():
     x=int(input("Enter x value :"))
     y=int(input("Enter y value :"))
     return(x,y)
 a,b=add()
-print(a+b)
+print(a+b)'''
+
+a=10
+def int():
+    global a
+    print(a)
+    a=5
+int()
+
 
     
