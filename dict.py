@@ -1,5 +1,6 @@
 # creating a dict
 d={'reg_no':140,'name':"raja",'age':20}
+print(d['name'])
     #key    #value
 '''print(d)
 
@@ -85,25 +86,26 @@ d.update(c)
 print(d)'''
 
     #nested dictionary
-'''a={'key':{'key':'value'}}
-
+#a={'key':{'key':'value'}}
+'''
 a={'a1':{'Name':'raja','age':20,'city':'Madurai'},
    'a2':{'Name':'ragu','age':21,'city':'Madurai'},
    'a3':{'Name':'ravi','age':22,'city':'Madurai'}
    }
-#print(a['a1']['Name'])'''
+'''
+#print(a['a1']['Name'])
 
 
 #accessing values in dictionary
 #task
 
-
-'''for i,b in a.items():
+'''
+for i,b in a.items():
     print(i)
     for j in b:
-        print(j,':',b[j])'''
+        print(j,':',b[j])
 
-
+'''
 '''for i in a.items():
     x,y=i
     print(x)
@@ -176,7 +178,7 @@ for i in range(z):
         
     d[x]=y
 print(d)
-    
+  
 
 
 
