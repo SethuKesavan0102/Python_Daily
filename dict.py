@@ -169,7 +169,7 @@ print(a)'''
 #5
 d={}
 l=['name','age','city']
-z=int(input("enter the number of pair :"))
+z=int(input("enter the number of person :"))
 for i in range(z):
     x=input("enter the key :")
     y={}

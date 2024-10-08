@@ -479,3 +479,83 @@ except Exception as e:
 finally:
     print("Finished")
 '''
+
+
+#task
+
+d={}
+l1=["Name","Age","Class"]
+class student:
+    def __init__(self):
+        for i in range(50):
+            self.x=int(input("1.Enter Student Details\n2.View Details\n3.Exit"))
+            if self.x==1:
+                self.student_detail()
+            
+            elif self.x==2:
+                self.view_details()
+                
+            elif self.x==3:
+                print("Thank You")
+                break
+            
+            else:
+                print("Invalid Option")
+                
+
+    def student_detail(self):
+        y=int(input("Enter Roll No:"))
+        z={}
+        for j in l1:
+            z[j]=input(j)
+            d[y]=z
+        
+    def view_details(self):
+        
+        p=int(input("View Details By :\n1.By Name\n2.By Age\n3.By Class\n4.By Roll_No"))
+        if p==1:
+            o=input("Enter Name :")
+            for i,b in d.items():
+                if b['Name']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==2:
+            o=input("Enter Age :")
+            for i,b in d.items():
+                if b['Age']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==3:
+            o=input("Enter Class :")
+            for i,b in d.items():
+                if b['Class']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==4:
+             h=int(input("Enter Roll No:"))
+             if h in d:
+                 c=d[h]
+                 print('Name :',c['Name'],"\n"'Age :',c['Age'],"\n"'Class :',c['Class'])
+
+             k=input("Do you Want to Delete(Y/N):")
+             if k=='y':                    
+                 del d[h]
+                 
+        else:
+            print("Invalid Option")
+        
+                          
+person=student()
+print(d)
