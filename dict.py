@@ -134,7 +134,7 @@ print(a)'''
 
 #3
 
-'''for i in range(50):
+for i in range(50):
     z=input("enter the key :")
     
     if z=='ok':
@@ -146,7 +146,7 @@ print(a)'''
    
     a.update({z:{'name':x,'city':y,'age':w}})
    
-print(a)'''
+print(a)
 
 #4
 
@@ -167,6 +167,7 @@ print(a)'''
 print(a)'''
 
 #5
+'''
 d={}
 l=['name','age','city']
 z=int(input("enter the number of person :"))
@@ -178,7 +179,7 @@ for i in range(z):
         
     d[x]=y
 print(d)
-  
+  '''
 
 
 

@@ -482,7 +482,7 @@ finally:
 
 
 #task
-
+'''
 d={}
 l1=["Name","Age","Class"]
 class student:
@@ -559,3 +559,222 @@ class student:
                           
 person=student()
 print(d)
+
+'''
+
+
+#task using update():
+'''
+d={}
+
+class student:
+    def __init__(self):
+        for i in range(50):
+            self.x=int(input("1.Enter Student Details\n2.View Details\n3.Exit"))
+            if self.x==1:
+                self.student_detail()
+            
+            elif self.x==2:
+                self.view_details()
+                
+            elif self.x==3:
+                print("Thank You")
+                break
+            
+            else:
+                print("Invalid Option")
+                
+
+    def student_detail(self):
+        y=int(input("Enter Roll No:"))
+        name=input("Enter the Name :")
+        age=input("Enter the Age :")
+        class_1=input("Enter the Class :")
+        d.update({y:{'Name':name,'Age':age,'Class':class_1}})
+
+
+    def view_details(self):
+        
+        p=int(input("View Details By :\n1.By Name\n2.By Age\n3.By Class\n4.By Roll_No"))
+        if p==1:
+            o=input("Enter Name :")
+            for i,b in d.items():
+                if b['Name']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==2:
+            o=input("Enter Age :")
+            for i,b in d.items():
+                if b['Age']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==3:
+            o=input("Enter Class :")
+            for i,b in d.items():
+                if b['Class']==o:
+                    print('Roll_No :',i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                k=input("Do you Want to Delete(Y/N):")
+                if k=='y':                    
+                    del d[i]
+                    break
+        elif p==4:
+             h=int(input("Enter Roll No:"))
+             if h in d:
+                 c=d[h]
+                 print('Name :',c['Name'],"\n"'Age :',c['Age'],"\n"'Class :',c['Class'])
+
+             k=input("Do you Want to Delete(Y/N):")
+             if k=='y':                    
+                 del d[h]
+                 
+        else:
+            print("Invalid Option")
+        
+                          
+person=student()
+print(d)
+'''
+
+
+#encapsulation:
+
+'''a=10    #public
+__a=10 `#private
+_a=10   #protector'''
+
+
+
+#task
+'''
+d={}
+l1=["Name","Age","Class"]
+class student:
+    def __init__(self):
+        count=0
+        
+        for i in range(50):
+            self.x=int(input("1.Enter Student Details\n2.View Details\n3.Delete The Data\n4.Exit"))
+            if self.x==1:
+                self.student_detail()
+                count=1
+            
+            elif self.x==2:
+                if count==1:
+                    self.view_details()
+                else:
+                    print("Enter Atleast One Value")
+                    
+                
+                
+            elif self.x==3:
+                print("Thank You")
+                break
+            
+            else:
+                print("Invalid Option")
+                
+
+    def student_detail(self):
+        y=int(input("Enter Roll No:"))
+        z={}
+        for j in l1:
+            z[j]=input(j)
+            d[y]=z
+        
+    def view_details(self):
+        
+        p=int(input("View Details By :\n1.By Name\n2.By Age\n3.By Class\n4.By Roll_No"))
+        if p==1:
+            o=input("Enter Name :")
+            for self.i,b in d.items():
+                if b['Name']==o:
+                    print('Roll_No :',self.i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+                self.delete_1()
+                break
+
+                
+        elif p==2:
+            o=input("Enter Age :")
+            for self.i,b in d.items():
+                if b['Age']==o:
+                    print('Roll_No :',self.i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                self.delete_1()
+                break
+            
+        elif p==3:
+            o=input("Enter Class :")
+            for self.i,b in d.items():
+                if b['Class']==o:
+                    print('Roll_No :',self.i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+
+                self.delete_1()
+                break
+            
+        elif p==4:
+             self.i=int(input("Enter Roll No:"))
+             if self.i in d:
+                 c=d[self.i]
+                 print('Name :',c['Name'],"\n"'Age :',c['Age'],"\n"'Class :',c['Class'])
+
+             self.delete_1()
+                 
+        else:
+            print("Invalid Option")
+
+
+
+class student1(student):
+    def delete_1(self):
+        k=input("Do you Want to Delete(Y/N):")
+        if k=='y':
+            del d[self.i]
+            
+        
+        
+                          
+#person=student()
+person1=student1()
+#person1.delete_1()
+print(d)
+'''
+
+#encapsulation:
+'''
+class grandparent:
+    def __init__(self):
+        self._a=45          #protected
+        self.__b=60         #private
+
+class parent(grandparent):
+    def add1(self):
+        print(self._a)
+class child(parent):
+    def __init__(self):
+        print("Child Constructor")
+    def add1(self):
+        print(self._a)
+
+x=parent()
+x.add1()
+'''
+
+
+#map
+'''
+def add1(a):
+    return a*2
+x=map(add1,[1,2,3,4,5,6])
+print(list(x))
+'''
+
+
