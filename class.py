@@ -777,4 +777,229 @@ x=map(add1,[1,2,3,4,5,6])
 print(list(x))
 '''
 
+#task
+'''
+d={}
+#l1=["Name","Age","Class"]
+class student:
+    def __init__(self):
+        for i in range(50):
+            self.x=int(input("1.Enter Student Details\n2.View Details\n3.Delete the Student\n4.Exit"))
+            if self.x==1:
+                self.student_detail()
+            
+            elif self.x==2:
+                self.view_details()
 
+            elif self.x==3:
+                self.delete_1()
+                
+                
+            elif self.x==4:
+                print("Thank You")
+                break
+            
+            else:
+                print("Invalid Option")
+                
+
+    def student_detail(self):
+        y=int(input("Enter Roll No:"))
+        name=input("Enter the Name :")
+        age=input("Enter the Age :")
+        class_1=input("Enter the Class :")
+        d.update({y:{'Name':name,'Age':age,'Class':class_1}})
+                
+    def view_details(self):
+        
+        p=int(input("View Details By :\n1.By Name\n2.By Age\n3.By Class\n4.By Roll_No"))
+        if p==1:
+            self.o=input("Enter Name :")
+            self.view_1()    
+        elif p==2:
+            self.o=input("Enter Age :")
+            self.view_1()
+        elif p==3:
+            self.o=input("Enter Class :")
+            self.view_1()    
+        elif p==4:
+            o=int(input("Enter Roll_No :"))
+            if o in d:
+                c=d[o]
+                print('Name :',c['Name'],"\n"'Age :',c['Age'],"\n"'Class :',c['Class'])              
+        else:
+           print("Invalid Option")
+
+    def view_1(self):
+        for self.i,b in d.items():
+                for j in b:
+                    if b[j]==self.o:
+                        print('Roll_No :',self.i,'\nName :',b['Name'],"\n"'Age :',b['Age'],"\n"'Class :',b['Class'])
+                        
+
+class student1(student):
+    def delete_1(self):
+        p=int(input("Delete Details By :\n1.By Name\n2.By Age\n3.By Class\n4.By Roll_No"))
+        if p==1:
+            self.o=input("Enter Name :")
+            self.dele_1()  
+        elif p==2:
+            self.o=input("Enter Age :")
+            self.dele_1()
+        elif p==3:
+            self.o=input("Enter Class :")
+            self.dele_1()   
+        elif p==4:
+            self.i=int(input("Enter Roll_No :"))
+            if self.i in d:
+                c=d[self.i]
+                print('Name :',c['Name'],"\n"'Age :',c['Age'],"\n"'Class :',c['Class'])
+            s=input("Do You Want to Delete (Y/N):")
+            if s=="y":
+                del d[self.i]
+        else:
+           print("Invalid Option")
+        
+    def dele_1(self):
+        self.view_1()
+        s=input("Do You Want to Delete (Y/N):")
+        if s=="y":
+            del d[self.i]
+
+            
+person=student1()
+print(d)
+'''
+
+
+#Filter
+'''
+def find1(x):
+    a=['a','e','i','o','u','A','E','I','O','U']
+    if x in a:
+        return True
+    else:
+        return False
+x=input("Enter String :")
+y=filter(find1,x)
+#print(list(y))
+print(len(list(y)))
+'''
+
+#reduce
+'''
+import functools
+def add1(a,b):
+    #print(a,b)
+    return a*2
+x=functools.reduce(add1,[1,2,3,4,5,6])
+print(x)
+'''
+
+#data abstraction:
+'''
+from abc import ABC,abstractmethod
+class Person1(ABC):
+    def __init__(self):
+        print("Constructor")
+    @abstractmethod
+    def add1(self):
+        pass
+class person2(Person1):
+    def add1(self):
+        print("Person2")
+class person3(Person1):
+    def add1(self):          #or pass
+        print("Person3")
+a1=person3()
+a1.add1()
+a2=person2()
+a2.add1()
+
+'''
+
+#os module:
+'''
+import os
+print(os.path.abspath(__file__))
+os.mkdir("New")
+print(os.getcwd())
+os.chdir('D:\\students')
+print(os.getcwd())
+print(os.listdir())
+os.rename("sample.txt","student.txt")
+print(os.path.exists('D:\\students'))
+'''
+
+#file handling:
+'''
+import os
+    #open(),read(),write(),close()
+#creating a new file:
+
+f=open('samplefile.txt','x')
+f.close()
+#write a Particular file:
+f=open("samplefile.txt",'w')
+f.write("Hello World")
+f.close()
+f.open("samplafile.txt",'r')
+print(f.read())
+#update file:
+f=open("samplefile.txt",'a')
+f.write("Hello World")
+f.close()
+
+with open("samplefile.txt",'a')as f:
+    f.write("\nthis is new line")
+with open("samplefile.txt",'a')as f:
+    print(f.readlines())
+
+
+'''
+
+#super()
+'''
+class parent:
+    def __init__(self,id,name):
+        self.id=id
+        self.name=name
+class child(parent):
+    def __init__(self,id,name,age):
+        super().__init__(id,name)
+        self.age=age
+    def print(self):
+        print(self.id)
+        print(self.name)
+        print(self.age)
+c1=child(101,'Raja',20)
+c1.print()
+
+'''
+
+#Date Time Module:
+
+import datetime as d
+'''
+print(d.datetime.now())
+print(d.date(2024,10,23))     #yyyy,mm,dd
+a=d.date.today()
+print(a)
+print(a.day)
+print(a.month)
+print(a.year)
+print(a.isoweekday())
+b=d.timedelta(days=100)
+c=a+b
+print(c)
+print((c-a).days)
+'''
+#Time module:
+print(d.time(10,50,34))             #hh,mm,ss,optional
+a=d.time(10,30,20)
+print(a)
+print(a.hour)
+print(a.minute)
+print(a.second)
+b=d.datetime.now()
+print(b.strftime('%A'))

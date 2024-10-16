@@ -1,6 +1,6 @@
 # creating a dict
 d={'reg_no':140,'name':"raja",'age':20}
-print(d['name'])
+#print(d['name'])
     #key    #value
 '''print(d)
 
@@ -42,11 +42,11 @@ print(d)'''
 
 
     #using for loop
+'''for i,b in d.items():
+    print(b) #default is key 
+'''
 '''for i in d:
-    print(i)''' #default is key 
-
-'''for i in d:
-    print(d[i])     #to get value'''
+    print(d[i])'''     #to get value
 
 '''for i in d.items():    #you can use d.value(),d.keys(),d.items() to get direct element
     print(i)'''
@@ -87,25 +87,25 @@ print(d)'''
 
     #nested dictionary
 #a={'key':{'key':'value'}}
-'''
+
 a={'a1':{'Name':'raja','age':20,'city':'Madurai'},
    'a2':{'Name':'ragu','age':21,'city':'Madurai'},
    'a3':{'Name':'ravi','age':22,'city':'Madurai'}
    }
-'''
+
 #print(a['a1']['Name'])
 
 
 #accessing values in dictionary
 #task
 
-'''
+
 for i,b in a.items():
     print(i)
     for j in b:
         print(j,':',b[j])
 
-'''
+
 '''for i in a.items():
     x,y=i
     print(x)
