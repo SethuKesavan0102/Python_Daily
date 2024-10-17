@@ -978,9 +978,8 @@ c1.print()
 '''
 
 #Date Time Module:
-
-import datetime as d
 '''
+import datetime as d
 print(d.datetime.now())
 print(d.date(2024,10,23))     #yyyy,mm,dd
 a=d.date.today()
@@ -993,7 +992,7 @@ b=d.timedelta(days=100)
 c=a+b
 print(c)
 print((c-a).days)
-'''
+
 #Time module:
 print(d.time(10,50,34))             #hh,mm,ss,optional
 a=d.time(10,30,20)
@@ -1001,5 +1000,53 @@ print(a)
 print(a.hour)
 print(a.minute)
 print(a.second)
-b=d.datetime.now()
-print(b.strftime('%A'))
+b=d.time.now()
+#print(b.strftime('%A'))
+print(b)
+'''
+
+#decorators:
+'''
+def parent():
+    def start():
+        print("start")
+        process()
+        finish()
+    return start
+
+def process():
+    print("process")
+
+def finish():
+    print("finish")
+    
+x=parent()
+x()
+'''
+'''
+def parent(fun):
+    def start():
+        print("start")
+        fun()
+        finish()
+    return start
+@parent
+def process():
+    print("process")
+
+def finish():
+    print("finish")
+    
+process()   
+'''
+
+#Math Functions:
+
+import math as m
+print(m.pi)
+print(m.sqrt(64))
+print(m.cbrt(64))
+print(m.floor(45.8))
+print(m.ceil(45.1))
+print(pow(3,4))
+print(m.fmod(20,3))
